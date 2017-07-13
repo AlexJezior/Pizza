@@ -44,11 +44,9 @@
 
 
   <div class="row">
-    <div id="copyright" class="small-12">
+    <div id="copyright" class="small-12 text-center">
       <hr>
-      Pizza Rita Inc. &copy; 1989-2016<br />
-      Web Site Created With <a href="http://www.whydevelop.com" target="_blank">WhYDevelop</a> Web Site Technologies w/ Alex Jezior<br />
-      Video And Photography Services By <a href="http://www.eventpho.com" target="_blank">Spokane Event Photography</a>
+      Alex Jezior &copy; 2016
     </div>
   </div>
 </footer>
