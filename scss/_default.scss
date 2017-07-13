@@ -1,0 +1,400 @@
+@font-face {
+  font-family: Merriweather-Heavy;
+  src: url(../fonts/Merriweather-HeavyItalic.ttf);
+}
+@font-face {
+  font-family: Vollkorn-BoldItalic;
+  src: url(../fonts/Vollkorn-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Vollkorn-Regular;
+  src: url(../fonts/Vollkorn-Regular.ttf);
+}
+
+.image-shadow{
+  box-shadow: $black 3px 3px 5px;
+}
+
+body{
+  background-color: $red;
+  font-family: Vollkorn-Regular, "Times New Roman", "Arial Black";
+  font-weight: bold;
+}
+header{
+  background-color: $red;
+
+
+  & #logo-container {
+    margin-top: 1rem;
+  }
+  & #logo-subheading {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding-left:0.75rem;
+    font-family: Vollkorn-BoldItalic, "Times New Roman", "Arial Black";
+    font-size: 1.3rem;
+    font-weight: bolder;
+    font-style: italic;
+    background-color: #222;
+    color: $white;
+
+  }
+
+  & .orbit-caption {
+    text-align: center;
+    font-weight: bolder;
+  }
+  & nav {
+    background: $black url('../images/NavBackgroundTile.png') repeat;
+    font-family: Merriweather-Heavy, "Times New Roman", "Arial Black";
+    font-size: 1.7rem;
+    font-weight: bolder;
+    font-style: italic;
+    box-shadow: $green 0 5px 5px;
+    position: relative;
+    z-index: 3;
+
+    & ul{
+      position: relative;
+      z-index: 1;
+    }
+    & a{
+      color: $yellow;
+    }
+    & a:visited{
+      color: $yellow;
+    }
+    & a:hover{
+      color: $white;
+    }
+  }
+}
+
+.carousel{
+  position: relative;
+  z-index: -2;
+}
+
+.subheader{
+  font-size: 1.5rem;
+  text-shadow: none;
+  line-height: 1.5rem;
+}
+
+
+
+p{
+  text-indent: 2rem;
+}
+
+
+.header-in-lines {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 2rem;
+
+  & h3 {
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    color: $green;
+    text-shadow: none;
+  }
+
+  & h3:before, h3:after {
+    background: $green;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    width: 400%;
+  }
+
+  & h3:before {
+    right: 100%;
+  }
+
+  & h3:after {
+    left: 100%;
+  }
+}
+
+
+
+
+
+
+main{
+  z-index: -10;
+  background-color: $white;
+}
+
+h3{
+  font-family: Vollkorn-BoldItalic, "Times New Roman", "Arial Black";
+  text-shadow: 2px 2px 4px $black;
+  display: inline-block;
+}
+
+.callout{
+  text-indent: 1.25rem;
+}
+
+main .tiles{
+  margin: 2rem auto;
+
+  a:hover > figure > figcaption{
+    top: -9.375rem;
+  }
+  & figure{
+    position: relative;
+    width: 9.375rem; //rem equivalent of 255px in 16px base
+    height: 9.375rem; //rem equivalent of 255px in 16px base
+    overflow: hidden;
+    font-family: Vollkorn-BoldItalic, "Times New Roman", "Arial Black";
+    font-size: 1rem;
+    font-weight: bolder;
+    font-style: italic;
+    color: $white;
+    text-shadow: 6px 5px 5px $black;
+    margin: 0 0 .25rem 0;
+    z-index: 100;
+
+    & figcaption{
+      position: relative;
+      top: -1.5rem;
+      height: 9.375rem;
+      background-color: rgba(42, 107, 50, 0.51);
+      transition: all 1S ease;
+    }
+  }
+
+}
+
+#rita-mission{
+  padding: 1.5rem 0;
+
+  & div:first-of-type, div:last-of-type{
+    position: relative;
+    left: -2000px;
+  }
+}
+
+#free-pizza-section{
+  position: relative;
+  background-color: $black;
+  color: $white;
+  box-shadow: -400px 0 0 $black, 400px 0 0 $black;
+  z-index: 1;
+  overflow: hidden;
+  font-weight: normal;
+  margin-top: 2rem;
+
+  & div{
+    min-height: 100%;
+  }
+  & div:first-of-type, div:last-of-type{
+    padding-top: 2rem;
+  }
+  & div:last-of-type{
+
+    & h3{
+      font-size: 1.6rem;
+      margin-bottom: 0;
+      line-height: 0.75rem;
+      text-align: center;
+
+      & #winners-date{
+        display: block;
+        font-size: 1rem;
+        line-height: 1rem;
+        color: $white;
+      }
+
+    }
+    & ul{
+      margin-top: 1rem;
+
+      & li{
+        font-weight: bold;
+        padding: 0.55rem;
+      }
+
+    }
+
+  }
+  & h3{
+    display: block;
+    font-style: normal;
+    color: $orange;
+  }
+  & p {
+    text-indent: 2rem;
+  }
+  & #free-pizza-picture{
+    background: url(../images/FreePizza.jpg) no-repeat 0 0;
+    //transition:background-position 0s ease-in;
+    padding: 0;
+  }
+}
+
+#reviews-section{
+  border: 1px solid $black;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 3rem 0;
+  padding: 0;
+  overflow: hidden;
+
+  & h2{
+    background-color: $black;
+    font-family: Merriweather-Heavy, "Times New Roman", "Arial Black";
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+    color: $red;
+    text-outline: 2px $black;
+    text-shadow: 1px 1px 0px $black,
+                -1px -1px 0px $black,
+                -1px 1px 0px $black,
+                1px -1px 0px $black,
+                2px 2px 4px $yellow,
+                -2px -2px 4px $yellow,
+                -2px 2px 4px $yellow,
+                2px -2px 4px $yellow;
+    text-align: center;
+    padding: 0.6rem 0;
+  }
+  & blockquote{
+    text-indent: 2rem;
+  }
+
+}
+
+
+.locations{
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  margin: 1rem;
+  padding-top: 1rem;
+  overflow: hidden;
+
+  & h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Vollkorn-BoldItalic, "Times New Roman", "Arial Black";
+    color: $yellow;
+    margin: 0;
+  }
+}
+#north-location{  background-color: rgba(65, 105, 225, 0.6);  }
+#north-location:hover{  background-color: rgba(65, 105, 225, 1);  }
+#central-location{  background-color: rgba(219, 68, 55, 0.6);  }
+#central-location:hover{  background-color: rgba(219, 68, 55, 1);  }
+#valley-location{  background-color: rgba(0, 157, 87, 0.6); }
+#valley-location:hover{  background-color: rgba(0, 157, 87, 1); }
+#plaza-location{  background-color: rgba(76, 76, 76, 0.6);  }
+#plaza-location:hover{  background-color: rgba(76, 76, 76, 1);  }
+
+
+
+
+
+
+.str-contact-by{
+  color: #52150c;
+}
+
+
+
+.accordion-title{  font-size: 1.3rem;  }
+.accordion-title:visited, .accordion-title:hover, .accordion-title:active, .accordion-title:focus{  color: $white;  }
+
+
+
+
+#challenge-header{
+  display: block;
+  padding-top: 1rem;
+  height: 100px;
+  background: url("/images/Challenge/Challenge_Header_Background.jpg") 50% 0 no-repeat;
+}
+
+
+
+
+footer{
+  background: $black url('../images/NavBackgroundTile.png') repeat;
+  color: $yellow;
+
+  & h5{
+    padding-top: 0.25rem;
+    font-size: 1.1rem;
+    color: $orange;
+    line-height: 1rem;
+  }
+  & h3{
+    border-bottom: 2px solid;
+    line-height: 1.4rem;
+  }
+  & a{
+    color: $yellow;
+  }
+  & a:visited{
+    color: $yellow;
+  }
+  & a:hover{
+    color: $white;
+  }
+  & li{
+    list-style: none;
+    font-size: 1.25rem;
+  }
+  & .socialIcons{
+
+    & a{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+    }
+    & a.iconFacebook{
+      background: url("../images/SocialIcons.png") 0 0;
+    }
+    & a.iconFacebook:hover{
+      background: url("../images/SocialIcons.png") 0 50px;
+    }
+    & a.iconTwitter{
+      background: url("../images/SocialIcons.png") 150px 0;
+    }
+    & a.iconTwitter:hover{
+      background: url("../images/SocialIcons.png") 150px 50px;
+    }
+    & a.iconYouTube{
+      background: url("../images/SocialIcons.png") 100px 0;
+    }
+    & a.iconYouTube:hover{
+      background: url("../images/SocialIcons.png") 100px 50px;
+    }
+    & a.iconInstagram{
+      background: url("../images/SocialIcons.png") 50px 0;
+    }
+    & a.iconInstagram:hover{
+      background: url("../images/SocialIcons.png") 50px 50px;
+    }
+
+
+  }
+  & #copyright{
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: $white;
+
+    & hr{
+      margin: 5px auto;
+    }
+  }
+}
